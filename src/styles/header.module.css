@@ -1,0 +1,46 @@
+.headerLogo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.headerToggle {
+    padding: .5rem .75rem;
+  border: var(--border);
+  border-radius: var(--border-radius);
+}
+
+.headerBox{
+  display:flex;
+  align-items: center;
+}
+.headerSub{
+  font-weight: 500;
+  font-size: 2.4rem; ;
+  line-height:2.9rem;
+  color:var(--color-grey);
+  margin-left: .5rem;
+  font-family: 'Inter', sans-serif;
+}
+
+.btn {
+  padding: .75rem;
+  border: none;
+  border-radius: var(--border-radius);
+  background: #f8fafd;
+}
+
+.btn:not(:last-child){
+    margin-right: 2rem;
+}
+
+
+.sub{
+  font-size:1.4rem;
+  color: var(--color-grey);
+  line-height:1.6rem;
+  cursor: pointer;
+}

@@ -1,0 +1,75 @@
+.backdrop {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  z-index: 50;
+  background: rgba(255, 255, 255, 0.87);
+}
+.modal {
+  /* background: #ffffff; */
+  /* width: 30%; */
+  /* height:31.9rem; */
+  /* margin: 0 auto; */
+  /* min-height: 80vh; */
+  top: 37%;
+  transform: translate(-50%, -50%);
+  left: 35%;
+  z-index: 60;
+  position: absolute;
+  animation: slide-down 300ms ease-out forwards;
+}
+
+@keyframes slide-down {
+  from {
+    opacity: 0;
+    transform: translateY(-3rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media screen and (max-width:768px){
+  .modal{
+    left: 24%;
+    padding: 2rem;
+    top: 20%;
+  }
+}
+
+@media screen and (max-width:540px){
+  .modal{
+    left: 15%;
+    padding: 2rem;
+  }
+}
+@media screen and (max-width:480px){
+  .modal{
+    left: 0%;
+    padding: 2rem;
+  }
+}
+
+
+
+
+
+/* mobile view */
+
+/* .pet_yt__3mGno {
+    width: 80%;
+    margin: 5rem auto;
+} */
+
+/* Modal */
+
+/* .modal_modal__3JFm5 {
+
+  top: 37%;
+  transform: translate(-50%, -50%);
+  left: 20%;
+  z-index: 60;
+  position: absolute;
+  animation: modal_slide-down__2FvCX 300ms ease-out forwards;
+} */

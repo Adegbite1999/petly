@@ -1,0 +1,10 @@
+.button {
+  border: none;
+  background: var(--color-primary);
+  outline: none;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+  border-radius: 30px;
+  width:30%;
+  padding:1rem;
+  color: #fff;
+}

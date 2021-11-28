@@ -1,0 +1,124 @@
+.footer {
+  background-image: url("../assets/ballrolls.b29dffd6.svg"),
+    url("../assets/angle.afe5c2b6.svg"), url("../assets/fan.8a554c36.svg"),
+    url("../assets/ballrolls.2.svg");
+  background-repeat: no-repeat;
+  background-position: left top, top right 50px, left 150px top 150px,
+    bottom right 50px;
+  background-size: 150px;
+}
+
+.headerToggle {
+  padding: 0.5rem 0.75rem;
+  border: var(--border);
+  border-radius: var(--border-radius);
+}
+
+.headerBox {
+  display: flex;
+  align-items: center;
+}
+.headerSub {
+  font-weight: 500;
+  font-size: 2.5rem;
+  line-height: 2.9rem;
+  color: var(--color-grey);
+  margin-left: 0.5rem;
+  font-family: "Inter", sans-serif;
+}
+.mt {
+  margin-top: 1rem;
+  font-family: "Inter", sans-serif;
+  font-size: 1.4rem;
+  color: #fff;
+}
+.headerLogo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  color: var(--color-grey);
+  font-size: 1.4rem;
+}
+
+.cta {
+  padding: 4rem;
+  width: 50%;
+  margin: 0 auto;
+}
+.footerBox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 3rem;
+}
+/* .condition {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2rem;
+} */
+.socialItem {
+  cursor: pointer;
+}
+.copyright {
+  text-align: center;
+  color: var(--color-grey-light);
+  font-size: 1.4rem;
+  margin: 0;
+}
+.socialItem:not(:last-child) {
+  margin-right: 1rem;
+}
+
+.ctaText {
+  font-family: "Inter", sans-serif;
+  font-size: 4.8rem;
+  line-height: 5.6rem;
+  font-weight: 600;
+  color: #58667e;
+}
+.hue {
+  color: var(--color-primary);
+}
+
+
+@media screen and (max-width: 768px) {
+  .cta {
+    width: 90%;
+    text-align: center;
+  }
+  .mt{
+    width: 100% !important;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .footer {
+    padding: 1rem;
+  }
+  .cta {
+    width: 100%;
+    margin: 0rem auto;
+    padding: 3rem;
+    text-align: center;
+  }
+  .footerBox {
+    flex-direction: column;
+    align-items: center;
+  }
+  .ctaText{
+    font-size: 3.8rem;
+    line-height: 4.6rem;
+  }
+  .mt{
+    width: 100% !important;
+  }
+}
