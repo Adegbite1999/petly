@@ -1,6 +1,5 @@
 import React from 'react';
 import styles from '../styles/home.module.css';
-// import placeholder from '../assets/Rectangle.png';
 import dog from '../assets/dog1.svg';
 import bird from '../assets/bird2.svg';
 import cat from '../assets/cat2.svg';
@@ -17,7 +16,7 @@ function Search({ pets }) {
             <h3 className={styles.heading}>Search Result</h3>
             <div className="uk-grid">
                 {
-                    pets.map((pet, index) => {
+                    pets.length === 0 ? <h1 className={styles.error}>No Pets found</h1> : pets.map((pet, index) => {
                         return (
                             <div key={index} className="uk-width-1-1@s uk-width-1-2@m uk-width-1-3@l uk-margin-small-top">
                                 <div class={`${styles.cardBorder} uk-card uk-card-small uk-card-default`}>

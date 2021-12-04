@@ -146,6 +146,7 @@
   border: none;
   color: #fff;
   padding: 2rem 2.5rem;
+  cursor: pointer;
 }
 .select {
   width: 10rem;
@@ -232,7 +233,8 @@ option {
 
 .petBox {
   background: #f0f6ff;
-  border: 2px solid rgba(13, 117, 255, 0.4);
+  /* border: 2px solid rgba(13, 117, 255, 0.4); */
+  border: none;
   box-sizing: border-box;
   border-radius: 20px;
   padding: 1rem;
@@ -244,6 +246,17 @@ option {
   font-weight: normal;
   font-size: 1.8rem;
   line-height: 2.3rem;
+  cursor: pointer;
+}
+.petBoxActive{
+   border: 2px solid rgba(13, 117, 255, 0.4);
+}
+.error{
+  color: var(--color-red);
+  font-size: 4rem;
+  font-weight: 500;
+  line-height:2rem;
+
 }
 .pets {
   display: grid;
@@ -251,6 +264,13 @@ option {
   grid-gap: 10px;
 }
 
+.header{
+  font-size: 4.25rem;
+  line-height: 2.5rem;
+  color: #58667E;
+  font-weight: 500;
+  margin-top: 7rem;
+}
 
 
 @media screen and (max-width:540px) {
