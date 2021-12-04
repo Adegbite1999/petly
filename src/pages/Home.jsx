@@ -31,22 +31,11 @@ function Home() {
         }
     }
     useEffect(() => {
-        // const FetchPets = async () => {
-        //     setLoading(false)
-        //     try {
-        //         setLoading(true)
-        //         const response = await fetch(`https://pets-v2.dev-apis.com/pets?animal=${animal}&location=${location}`)
-        //         const data = await response.json()
-        //         setPets(data.pets)
-        //     } catch (error) {
-        //         throw error
-        //     }
-        //     setLoading(false)
-        // }
         FetchPets()
     }, 
     // eslint-disable-next-line
-    [animal, location])
+    [])
+    
 
 
     const onChangeLocationHandler = (event) =>{
