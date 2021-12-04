@@ -17,6 +17,7 @@ function Home() {
     const [loading, setLoading] = useState(false)
     const [pets, setPets] = useState([])
     const [animal, setAnimal] = useState('')
+    const [filteredAnimal, setFilteredAnimal] = useState([])
     const [location, setLocation] = useState('')
     const FetchPets = async () => {
         setLoading(true)
@@ -35,7 +36,14 @@ function Home() {
     }, 
     // eslint-disable-next-line
     [])
+
+const FilterRequest = async () =>{
+try {
     
+} catch (error) {
+    
+}
+}
 
 
     const onChangeLocationHandler = (event) =>{
@@ -49,7 +57,7 @@ function Home() {
         event.preventDefault()
         FetchPets()
     }
-    // console.log(pets);
+
     return (
         <div>
             <div className={styles.wrapper}>
