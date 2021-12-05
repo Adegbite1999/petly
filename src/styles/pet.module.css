@@ -20,7 +20,9 @@
   align-items: center;
   justify-content: center;
 }
-
+/* .imgHeight {
+  height: 50rem;
+} */
 .city {
   font-family: inherit;
   font-style: normal;
@@ -42,7 +44,7 @@
 .cardBorder4 {
   width: 100%;
   height: 20rem;
-  border-radius:10px
+  border-radius: 10px;
 }
 .yt {
   width: 80%;
@@ -52,6 +54,8 @@
 .imgWidth {
   width: 100%;
   height: 100%;
+  height: 100%;
+  object-position: center;
 }
 
 .petName {
@@ -163,8 +167,8 @@
   font-size: 2.4rem;
   line-height: 2.9rem;
   text-align: center;
-  color:var(--color-grey);
+  color: var(--color-grey);
 }
-.subx{
-  color: var(--color-red)
+.subx {
+  color: var(--color-red);
 }

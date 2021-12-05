@@ -12,6 +12,8 @@ import { ImCancelCircle } from 'react-icons/im';
 import Search from '../pages/Search'
 import Pets from './Pets';
 import { locations, animals } from '../data/pets'
+import { ToastContainer, toast } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
 
 function Home() {
     const [loading, setLoading] = useState(false)
@@ -27,7 +29,7 @@ function Home() {
             setPets(data.pets)
             setLoading(false)
         } catch (error) {
-            throw error
+            toast.error(error.message)
         }
     }
     useEffect(() => {
@@ -53,6 +55,7 @@ function Home() {
 
     return (
         <div>
+            <ToastContainer/>
             <div className={styles.wrapper}>
                 <section className={`${styles.wrapperMain} uk-grid uk-padding-large`}>
                     <div className="uk-width-1-1@s uk-width-1-2@m">

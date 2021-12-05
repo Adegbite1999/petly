@@ -7,6 +7,8 @@ import rabbit from '../assets/rabbit.svg';
 import reptile from '../assets/reptile.svg';
 import { Link } from 'react-router-dom';
 import { GoLocation } from 'react-icons/go';
+import { ToastContainer, toast } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
 
 
 function Pets({ setLoading }) {
@@ -24,7 +26,7 @@ function Pets({ setLoading }) {
             setFilteredAnimal(data.pets)
             setLoading(false)
         } catch (error) {
-            throw error
+            toast.error(error.message)
         }
     }
 
@@ -55,6 +57,8 @@ function Pets({ setLoading }) {
         setActiveTab('reptile')
     }
     return (
+        <>
+        <ToastContainer/>
         <div className="uk-margin-large-top ">
             <h3 className={styles.heading2}>Browse Through Pets Types</h3>
             <div className={styles.pets}>
@@ -110,7 +114,7 @@ function Pets({ setLoading }) {
                                             </div>
                                             <div className={`$ uk-flex uk-flex-between uk-flex-middle`}>
                                                 <div className={`uk-margin-small-top`}>
-                                                    <Link to="/pet">
+                                                    <Link to={`/pet/${item.id}`}>
                                                         <button className={`${styles.details}`}>View Details</button>
                                                     </Link>
                                                 </div>
@@ -145,7 +149,7 @@ function Pets({ setLoading }) {
                                                 </div>
                                                 <div className={`$ uk-flex uk-flex-between uk-flex-middle`}>
                                                     <div className={`uk-margin-small-top`}>
-                                                        <Link to="/pet">
+                                                        <Link to={`/pet/${item.id}`}>
                                                             <button className={`${styles.details}`}>View Details</button>
                                                         </Link>
                                                     </div>
@@ -180,7 +184,7 @@ function Pets({ setLoading }) {
                                                 </div>
                                                 <div className={`$ uk-flex uk-flex-between uk-flex-middle`}>
                                                     <div className={`uk-margin-small-top`}>
-                                                        <Link to="/pet">
+                                                        <Link to={`/pet/${item.id}`}>
                                                             <button className={`${styles.details}`}>View Details</button>
                                                         </Link>
                                                     </div>
@@ -214,7 +218,7 @@ function Pets({ setLoading }) {
                                                 </div>
                                                 <div className={`$ uk-flex uk-flex-between uk-flex-middle`}>
                                                     <div className={`uk-margin-small-top`}>
-                                                        <Link to="/pet">
+                                                        <Link to={`/pet/${item.id}`}>
                                                             <button className={`${styles.details}`}>View Details</button>
                                                         </Link>
                                                     </div>
@@ -248,7 +252,7 @@ function Pets({ setLoading }) {
                                                 </div>
                                                 <div className={`$ uk-flex uk-flex-between uk-flex-middle`}>
                                                     <div className={`uk-margin-small-top`}>
-                                                        <Link to="/pet">
+                                                        <Link to={`/pet/${item.id}`}>
                                                             <button className={`${styles.details}`}>View Details</button>
                                                         </Link>
                                                     </div>
@@ -268,6 +272,7 @@ function Pets({ setLoading }) {
                 </div>
             </div>
         </div>
+        </>
     )
 }
 

@@ -39,7 +39,7 @@ function Search({ pets }) {
                                     </div>
                                     <div className={`$ uk-flex uk-flex-between uk-flex-middle`}>
                                         <div className={`uk-margin-small-top`}>
-                                            <Link to="/pet">
+                                            <Link to={`/pet/${pet.id}`}>
                                                 <button className={`${styles.details}`}>View Details</button>
                                             </Link>
                                         </div>
