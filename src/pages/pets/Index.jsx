@@ -44,7 +44,8 @@ function Index() {
     return (
         <>
         <ToastContainer/>
-        <section className="uk-padding-small">
+        {
+            loading? <h1>Loading...</h1> :    <section className="uk-padding-small">
             {
                 pet.map((item, index) => {
                     return (
@@ -128,6 +129,8 @@ function Index() {
                 })
             }
         </section>
+        }
+     
         </>
     )
 }
