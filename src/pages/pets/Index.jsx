@@ -27,7 +27,6 @@ function Index() {
             toast.error(error.message)
         }
     }
-    console.log(pet)
 
 
     useEffect(() => {
