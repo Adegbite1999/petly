@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import styles from '../styles/home.module.css'
 import cat from '../assets/cat.jfif';
 import dog from '../assets/dog.jfif';
@@ -12,54 +12,50 @@ import { ImCancelCircle } from 'react-icons/im';
 import Search from '../pages/Search'
 import Pets from './Pets';
 import { locations, animals } from '../data/pets'
+import { ToastContainer, toast } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
 
 function Home() {
     const [loading, setLoading] = useState(false)
     const [pets, setPets] = useState([])
     const [animal, setAnimal] = useState('')
-    const [filteredAnimal, setFilteredAnimal] = useState([])
     const [location, setLocation] = useState('')
     const FetchPets = async () => {
         setLoading(true)
         try {
-            
+
             const response = await fetch(`https://pets-v2.dev-apis.com/pets?animal=${animal}&location=${location}`)
             const data = await response.json()
             setPets(data.pets)
             setLoading(false)
         } catch (error) {
-            throw error
+            toast.error(error.message)
         }
     }
     useEffect(() => {
+        window.scroll(0, 0)
         FetchPets()
-    }, 
-    // eslint-disable-next-line
-    [])
-
-const FilterRequest = async () =>{
-try {
-    
-} catch (error) {
-    
-}
-}
+    },
+        // eslint-disable-next-line
+        [])
 
 
-    const onChangeLocationHandler = (event) =>{
+
+    const onChangeLocationHandler = (event) => {
         setLocation(event.target.value)
     }
-    const onChangeAnimalHandler = (event) =>{
+    const onChangeAnimalHandler = (event) => {
         setAnimal(event.target.value)
     }
 
-    const submitHandler = (event) =>{
+    const submitHandler = (event) => {
         event.preventDefault()
         FetchPets()
     }
 
     return (
         <div>
+            <ToastContainer/>
             <div className={styles.wrapper}>
                 <section className={`${styles.wrapperMain} uk-grid uk-padding-large`}>
                     <div className="uk-width-1-1@s uk-width-1-2@m">
@@ -102,7 +98,6 @@ try {
                                         <span><GiScales size={15} /></span>
                                         <select className={`${styles.select} uk-margin-small-left`}>
                                             <option>Breed</option>
-                                            <option>Sherpard</option>
                                         </select>
                                     </div>
                                 </div>
@@ -145,8 +140,11 @@ try {
                 </section>
             </div>
             <section className={styles.section2}>
-                <Search loading={loading} pets={pets}/>
-                <Pets />
+                <Search loading={loading} pets={pets} />
+                <Pets 
+                loading={loading}
+                setLoading={setLoading} 
+                />
             </section>
         </div>
     )

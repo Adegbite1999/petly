@@ -9,7 +9,7 @@ const Dashboard = () => {
     return (
         <Routes>
             <Route exact path='/' element={<Home/>} />
-            <Route exact path='/pet' element={<Pets/>} />
+            <Route exact path='/pet/:id' element={<Pets/>} />
         </Routes>
     )
 }
