@@ -106,7 +106,12 @@
 
   font-family: "Inter", sans-serif;
 }
-
+.introLight{
+  color: #fff;
+}
+.light{
+  color: var(--color-light-medium);
+}
 /* Location Card */
 
 .locCard {

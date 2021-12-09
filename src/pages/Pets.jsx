@@ -100,7 +100,12 @@ function Pets({ setLoading }) {
                                                     <p className={`${styles.cardDesc} uk-margin-remove`}>{item.breed}</p>
                                                 </div>
                                                 <div>
-                                                    <img src={dog} alt="animal-icon" />
+                                                <img src={item.animal === 'dog'
+                                                ? dog : item.animal === 'cat' ?
+                                                    cat : item.animal === 'bird' ? bird :
+                                                        item.animal === 'rabbit' ?
+                                                            rabbit : item.animal === 'reptile' ?
+                                                                reptile : null} alt="animal-icon" />
                                                 </div>
                                             </div>
                                             <div className={`$ uk-flex uk-flex-between uk-flex-middle`}>
