@@ -154,10 +154,19 @@
   cursor: pointer;
 }
 .select {
-  width: 10rem;
+  width: 14rem;
   border: none;
   outline: none;
   background: transparent;
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 1.7;
+  color: var(--color-grey);
+}
+.selectDark{
+  color: rgba(133,136,163,var(--opacity)) !important;
 }
 
 .select:hover {
@@ -210,6 +219,8 @@ option {
   line-height: 2.9rem;
   color: #58667e;
 }
+
+
 
 .cardDesc {
   font-family: "Inter", sans-serif;
@@ -276,7 +287,33 @@ option {
   font-weight: 500;
   margin-top: 7rem;
 }
+/* Dark mode styles */
+.container {
+  background: rgba(17,24,39,var(--opacity));
+} 
 
+.locDark{
+background: rgba(24,32,57,var(--opacity))
+}
+.locTextDark{
+  background: rgba(24,32,57,var(--opacity));
+}
+.cardDark{
+  background: rgba(14,24,42,var(--opacity)) !important;
+  box-shadow: 0 5px 15px rgba(31,41,55,var(--opacity)) !important;
+}
+.lightText{
+  color: #fff
+}
+.lightTextSub{
+  color: rgba(156,163,175,var(--opacity)) !important;
+}
+.lightTextSub2{
+  color: rgba(209,213,219,var(--opacity)) !important;
+}
+.togglerBg{
+  background: rgba(24, 32, 57, var(--opacity));
+}
 
 @media screen and (max-width:540px) {
   .title {
@@ -313,5 +350,17 @@ option {
   }
   .location{
     border-radius: 0;
+    flex-direction: column;
+    padding:.5rem;
+  }
+  .select{
+    width: 21rem;
+  }
+  .ctaLoc{
+    display: flex;
+    transform: translateX(-81px);
+  }
+  .locCard{
+    height:265px;
   }
 }

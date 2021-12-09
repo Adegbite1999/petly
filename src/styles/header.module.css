@@ -52,3 +52,9 @@
   line-height:1.6rem;
   cursor: pointer;
 }
+
+@media  screen and (max-width: 540px){
+  .sub{
+    display: none;
+  }
+}

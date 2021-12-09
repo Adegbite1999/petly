@@ -68,12 +68,12 @@ function Home() {
                                 puppy, cat or kitten.
                             </p>
                         </div>
-                        <div className={styles.locCard}>
-                            <form onSubmit={submitHandler} className={styles.location}>
+                        <div className={`${styles.locCard} ${theme === 'light'? '' : styles.container}`}>
+                            <form onSubmit={submitHandler} className={`${styles.location} ${theme === 'light'? '' : styles.locDark}`}>
                                 <div className={styles.selectWrapper}>
-                                    <div className={styles.selectBox}>
+                                    <div className={`${styles.selectBox} ${theme === 'light'? '' : styles.selectDark}`}>
                                         <span><GoLocation size={15} /></span>
-                                        <select onChange={onChangeLocationHandler} value={location} className={`${styles.select} uk-margin-small-left`}>
+                                        <select onChange={onChangeLocationHandler} value={location} className={`${styles.select} ${theme === 'light'? '' : styles.selectDark} uk-margin-small-left`}>
                                             {
                                                 locations.map((location, index) => {
                                                     return (
@@ -83,9 +83,9 @@ function Home() {
                                             }
                                         </select>
                                     </div>
-                                    <div className={styles.selectBox}>
+                                    <div className={`${styles.selectBox} ${theme === 'light'? '' : styles.selectDark}`}>
                                         <span><FaDog size={15} /></span>
-                                        <select onChange={onChangeAnimalHandler} value={animal} className={`${styles.select} uk-margin-small-left`}>
+                                        <select onChange={onChangeAnimalHandler} value={animal} className={`${styles.select} ${theme === 'light'? '' : styles.selectDark}  uk-margin-small-left`}>
                                             {
                                                 animals.map((animal, index) => {
                                                     return (
@@ -95,9 +95,9 @@ function Home() {
                                             }
                                         </select>
                                     </div>
-                                    <div className={styles.selectBox}>
+                                    <div className={`${styles.selectBox} ${theme === 'light'? '' : styles.selectDark}`}>
                                         <span><GiScales size={15} /></span>
-                                        <select className={`${styles.select} uk-margin-small-left`}>
+                                        <select className={`${styles.select} uk-margin-small-left ${theme === 'light'? '' : styles.selectDark}`}>
                                             <option>Breed</option>
                                         </select>
                                     </div>
