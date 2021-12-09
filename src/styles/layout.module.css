@@ -4,7 +4,6 @@
   align-items: center;
   padding-top: 0.5rem;
   padding-bottom: 1rem;
-  grid-column: 1 / span 12;
   background: #ffffff;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.04);
   position: sticky;
@@ -25,3 +24,11 @@ height:100%;
 .container {
   background: rgba(17,24,39,var(--opacity));
 } 
+
+@media  screen and (max-width: 540px){
+.header{
+justify-content:space-between;
+padding: 2rem;
+}
+
+}

@@ -17,7 +17,7 @@ function Header() {
             <p className={`${classes.sub} uk-margin-remove ${theme === 'light' ?'': classes.textLight}`}>Find a pet to Adopt</p>
             <p className={`${classes.sub} uk-margin-remove ${theme === 'light' ? "" : classes.textLight }`}>Report a missing pet</p>
 
-            <div className={`${classes.headerToggle} ${theme === 'light' ? '' : classes.headerToggleDark}`}>
+            <div className={`${classes.headerToggle} `}>
                 <ThemeButton />
             </div>
         </header>

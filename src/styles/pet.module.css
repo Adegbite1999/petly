@@ -107,6 +107,7 @@
   border-radius: 2px;
   width: 14.7rem;
   padding: 0.5rem;
+  margin-top:1rem !important
 }
 .petCta {
   margin-top: 2rem;
@@ -171,4 +172,29 @@
 }
 .subx {
   color: var(--color-red);
+}
+
+.cardDark{
+  background: rgba(14,24,42,var(--opacity)) !important;
+  box-shadow: 0 5px 15px rgba(31,41,55,var(--opacity)) !important;
+}
+.cardBg{
+  background: none !important;
+  box-shadow: none !important;
+}
+.descBg{
+  background: rgba(24,32,57,var(--opacity));
+}
+.initialsBg{
+  background: rgba(24,32,57,var(--opacity));
+}
+
+.initialsTextLight{
+  color: #fff;
+}
+.initialsTextSub{
+  color: rgba(156,163,175,var(--opacity)) !important;
+}
+.initialsTextSub2{
+  color: rgba(209,213,219,var(--opacity)) !important;
 }
