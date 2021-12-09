@@ -10,6 +10,9 @@
   --color-grey:#344062;
   --color-grey-light: #616681;
   --color-red:#D21A30;
+  --opacity:1;
+  --color-light-medium:rgba(209,213,219,var(--opacity));
+  --border-dark:rgba(31,41,55,var(--opacity))
 }
 
 *,

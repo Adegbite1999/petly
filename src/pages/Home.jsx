@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useContext, useEffect } from 'react'
 import styles from '../styles/home.module.css'
 import cat from '../assets/cat.jfif';
 import dog from '../assets/dog.jfif';
@@ -13,9 +13,10 @@ import Search from '../pages/Search'
 import Pets from './Pets';
 import { locations, animals } from '../data/pets'
 import { ToastContainer, toast } from 'react-toastify';
-  import 'react-toastify/dist/ReactToastify.css';
-
+import 'react-toastify/dist/ReactToastify.css';
+import { ThemeContext } from '../context/ThemeContext';
 function Home() {
+    const { theme } = useContext(ThemeContext)
     const [loading, setLoading] = useState(false)
     const [pets, setPets] = useState([])
     const [animal, setAnimal] = useState('')
@@ -55,15 +56,15 @@ function Home() {
 
     return (
         <div>
-            <ToastContainer/>
+            <ToastContainer />
             <div className={styles.wrapper}>
                 <section className={`${styles.wrapperMain} uk-grid uk-padding-large`}>
                     <div className="uk-width-1-1@s uk-width-1-2@m">
                         <div>
                             <span className={`${styles.intro} uk-margin-remove`}>Find Special pets</span>
-                            <h1 className={`${styles.title} uk-margin-remove`}>Think you love pet?</h1>
+                            <h1 className={`${styles.title} uk-margin-remove ${theme === 'light'? '' :styles.introLight }`}>Think you love pet?</h1>
                             <h2 className={`${styles.sub} uk-margin-remove`}>Adopt One.</h2>
-                            <p className={`${styles.desc} uk-margin-remove`}>Pet Adoption is quickly becoming the preferred way to find a new dog,
+                            <p className={`${styles.desc} uk-margin-remove ${theme === 'light'? '' : styles.light}`}>Pet Adoption is quickly becoming the preferred way to find a new dog,
                                 puppy, cat or kitten.
                             </p>
                         </div>
@@ -141,9 +142,9 @@ function Home() {
             </div>
             <section className={styles.section2}>
                 <Search loading={loading} pets={pets} />
-                <Pets 
-                loading={loading}
-                setLoading={setLoading} 
+                <Pets
+                    loading={loading}
+                    setLoading={setLoading}
                 />
             </section>
         </div>

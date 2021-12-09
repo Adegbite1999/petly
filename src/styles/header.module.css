@@ -7,12 +7,20 @@
   align-items: center;
   justify-content: center;
 }
+.headerLogoDark {
+  background: var(--color-red);
+}
 .headerToggle {
     padding: .5rem .75rem;
   border: var(--border);
   border-radius: var(--border-radius);
 }
-
+.textLight{
+  color: #fff !important;
+}
+.headerToggleDark{
+  border: var(--border-dark);
+}
 .headerBox{
   display:flex;
   align-items: center;
@@ -26,7 +34,7 @@
   font-family: 'Inter', sans-serif;
 }
 
-.btn {
+/* .btn {
   padding: .75rem;
   border: none;
   border-radius: var(--border-radius);
@@ -35,7 +43,7 @@
 
 .btn:not(:last-child){
     margin-right: 2rem;
-}
+} */
 
 
 .sub{

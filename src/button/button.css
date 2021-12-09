@@ -8,3 +8,22 @@
   padding:1rem;
   color: #fff;
 }
+
+.btn {
+  padding: .75rem;
+  border: none;
+  border-radius: var(--border-radius);
+  background: transparent;
+  cursor: pointer;
+}
+
+.btn:not(:last-child){
+    margin-right: 2rem;
+}
+
+.theme-light{
+background: rgba(248, 250, 253, var(--opacity));
+}
+.theme-dark{
+  background: rgba(24,32,57,var(--opacity));
+  }
